@@ -3,7 +3,7 @@ import mujoco as mj
 import mujoco.viewer
 
 def main():
-    model = mj.MjModel.from_xml_path("master_models/master_scene.xml")
+    model = mj.MjModel.from_xml_path("franka_emika_panda/scene.xml")
     data = mj.MjData(model)
 
 
@@ -17,7 +17,8 @@ def main():
         viewer.cam.elevation = -15
 
         while viewer.is_running():
-            t = data.time
+            mj.mj_step(model, data)
+            viewer.sync()
 
 
 
