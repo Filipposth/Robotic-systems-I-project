@@ -4,6 +4,8 @@
   <include file="base.xml"/>
   <include file="tray.xml"/>
   <include file="sphere.xml"/>
+  <include file="asymetric_tray.xml"/>
+  
 
 
   <statistic center="0.3 0 0.4" extent="1"/>
